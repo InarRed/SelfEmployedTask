@@ -5,9 +5,9 @@ namespace MessengerCoreAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class RGDialogClientsController : ControllerBase
+public class ClientsController : ControllerBase
 {
-    [HttpPost]
+    [HttpPost("findDialog")]
     public ActionResult<Guid> FindDialog(FindDialogDto findDialogDto)
     {
         var dialogsClients = new RGDialogsClients().Init();
